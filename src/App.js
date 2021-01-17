@@ -26,7 +26,7 @@ export class App extends Component {
       .then((res) => this.setState({ todos: res.data }));
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=baltimore&appid=5c863e4798d251dbe4b77ba20bcab195`
+        `https://api.openweathermap.org/data/2.5/weather?q=baltimore&appid=5c863e4798d251dbe4b77ba20bcab195`
       )
       .then((res) => {
         this.setState({
