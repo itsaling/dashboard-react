@@ -1,0 +1,212 @@
+$color-primary-dark: #1c1b57;
+$color-primary-light: #252467;
+$color-secondary: #edafc2;
+$color-light: #7c7ca4;
+$color-light-grey: #adadad;
+
+$font-family: "Montserrat", sans-serif;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+h1,
+h2,
+h4 {
+  color: $color-primary-dark;
+  font-weight: 800;
+}
+.container-fluid {
+  background-color: #f8f8fb;
+  .dashboard {
+    padding: 3em;
+  }
+}
+.sidebar {
+  background-image: linear-gradient(
+    $color-primary-dark 37%,
+    $color-primary-light 52%
+  );
+  color: $color-light;
+  width: 300px;
+  height: 100vh;
+  text-align: center;
+  .container {
+    padding: 3em 0 0em 0;
+
+    .avatar {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 80px;
+    }
+    h4 {
+      margin-bottom: 3em;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+  nav {
+    background-color: $color-primary-light;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    ul {
+      // height: 50vh;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      justify-content: space-evenly;
+      margin-top: 30px;
+
+      li {
+        padding: 1em 1em;
+        display: flex;
+        i {
+          margin-right: 15px;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  border: none;
+  background: transparent;
+
+  .card-container {
+    background-color: #fff;
+    padding: 2em 2em 2em 2em;
+    border-radius: 2em;
+    margin-bottom: 0.5em;
+    box-shadow: 0px 0px 5px #ededef;
+    color: $color-primary-dark;
+    p {
+      color: $color-light-grey;
+    }
+    h4 {
+      font-weight: 800;
+    }
+    .calculator {
+      input {
+        width: 50%;
+      }
+      .btn {
+        margin-left: 1em;
+      }
+
+      .btn-reset {
+        background-color: $color-primary-dark;
+        color: #fff;
+        &:hover {
+          color: $color-primary-dark;
+          background-color: $color-secondary;
+        }
+        &:focus {
+          outline: none;
+        }
+        &:active {
+          outline: 0;
+        }
+      }
+    }
+    .goal {
+      h4 {
+        margin-top: -15px;
+      }
+    }
+    .calendar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .react-calendar {
+        width: 100%;
+        border: none;
+      }
+    }
+    .weather {
+      .temp-switch {
+        cursor: pointer;
+      }
+      .weather-icon {
+        p {
+          text-transform: capitalize;
+          margin-bottom: 1.5em;
+        }
+        h4 {
+          margin-top: -15px;
+        }
+      }
+    }
+    .quote {
+      p {
+        margin-top: 1.5em;
+        &:nth-child(even) {
+          color: $color-primary-dark;
+        }
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+
+    form {
+      input {
+        border: none;
+        border-bottom: 1px solid #dfdfdf;
+        padding: 0.6em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        &:focus {
+          outline: none;
+        }
+        &:active {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+.todoAdd {
+  margin-bottom: 2em;
+  .input-todo {
+    width: 70%;
+  }
+  .btn {
+    margin-left: 1.5em;
+    color: $color-secondary;
+    font-size: 2em;
+    transition: 0.25s all ease;
+    &:hover {
+      color: $color-primary-dark;
+    }
+    &:active {
+      outline: none;
+    }
+  }
+}
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+  p {
+    margin-bottom: 0;
+  }
+
+  .btn-del {
+    color: $color-secondary;
+    transition: 0.25s all ease;
+  }
+  &:hover {
+    p,
+    .btn-del {
+      color: $color-primary-dark;
+    }
+  }
+}
