@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { GlobalProvider } from "./components/context/GlobalState";
 import Sidebar from "./components/Sidebar";
 import Goals from "./components/Goals";
 import Weather from "./components/Weather";
@@ -60,48 +61,43 @@ export class App extends Component {
 
   render() {
     return (
-      <>
+      <GlobalProvider>
         <div className="container-fluid">
-          <div className="row">
-            <div className="col-2">
-              <Sidebar />
-            </div>
-            <div className="col dashboard">
-              <Greetings />
-              <div className="card-columns">
-                <div className="card">
-                  <Transactions
-                    money={this.state.money}
-                    addMoney={this.addMoney}
-                  />
+          <div className="dashboard">
+            <Greetings />
+            <div className="card-columns">
+              <div className="card">
+                <Transactions
+                  money={this.state.money}
+                  addMoney={this.addMoney}
+                />
+              </div>
+              <div className="card">
+                <Goals />
+              </div>
+              <div className="card">
+                <Weather
+                  weathers={this.state.weathers}
+                  location={this.state.location}
+                  descriptions={this.state.descriptions}
+                />
+              </div>
+              <div className="card">
+                <Motivations quotes={this.state.quotes} />
+              </div>
+              <div className="card">
+                <div className="card-container">
+                  <AddTodos addTodo={this.addTodo} />
+                  <Todos todos={this.state.todos} delTodo={this.delTodo} />
                 </div>
-                <div className="card">
-                  <Goals />
-                </div>
-                <div className="card">
-                  <Weather
-                    weathers={this.state.weathers}
-                    location={this.state.location}
-                    descriptions={this.state.descriptions}
-                  />
-                </div>
-                <div className="card">
-                  <Motivations quotes={this.state.quotes} />
-                </div>
-                <div className="card">
-                  <div className="card-container">
-                    <AddTodos addTodo={this.addTodo} />
-                    <Todos todos={this.state.todos} delTodo={this.delTodo} />
-                  </div>
-                </div>
-                <div className="card">
-                  <CalendarUse />
-                </div>
+              </div>
+              <div className="card">
+                <CalendarUse />
               </div>
             </div>
           </div>
         </div>
-      </>
+      </GlobalProvider>
     );
   }
 }

@@ -52,7 +52,7 @@ export class Transactions extends Component {
               onChange={(e) => this.setState({ cash: e.target.value })}
               required
             />
-            <button className="btn btn-outline-primary" type="submit">
+            <button className="btn btn-outline-primary btn-sm" type="submit">
               Enter
             </button>
           </form>
@@ -66,18 +66,18 @@ export class Transactions extends Component {
               required
             />
             <button
-              className="btn btn-outline-success"
+              className="btn btn-outline-success btn-sm"
               type="button"
               onClick={this.addAmount}
             >
               Add
             </button>
             <button
-              className="btn btn-outline-danger"
+              className="btn btn-outline-danger btn-sm"
               type="button"
               onClick={this.subAmount}
             >
-              Subtract
+              Sub
             </button>
           </form>
           <br />

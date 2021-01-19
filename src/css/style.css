@@ -13,6 +13,18 @@ h4 {
   background-color: #f8f8fb; }
   .container-fluid .dashboard {
     padding: 3em; }
+    @media (max-width: 399px) {
+      .container-fluid .dashboard {
+        padding: .5em; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .container-fluid .dashboard {
+        padding: 1em; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .container-fluid .dashboard .card-columns {
+        column-count: 2; } }
+    @media (min-width: 1024px) {
+      .container-fluid .dashboard .card-columns {
+        column-count: 3; } }
 
 .sidebar {
   background-image: linear-gradient(#1c1b57 37%, #252467 52%);
@@ -51,6 +63,9 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media (max-width: 399px) {
+    .flex-box {
+      display: block; } }
 
 .card {
   border: none;
@@ -118,7 +133,7 @@ h4 {
   .todoAdd .input-todo {
     width: 70%; }
   .todoAdd .btn {
-    margin-left: 1.5em;
+    margin-left: .5em;
     color: #edafc2;
     font-size: 2em;
     transition: 0.25s all ease; }
