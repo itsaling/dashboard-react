@@ -13,7 +13,7 @@ h4 {
   background-color: #f8f8fb; }
   .container-fluid .dashboard {
     padding: 3em; }
-    @media (max-width: 399px) {
+    @media (max-width: 767px) {
       .container-fluid .dashboard {
         padding: .5em; } }
     @media (min-width: 768px) and (max-width: 1023px) {
@@ -63,7 +63,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  @media (max-width: 399px) {
+  @media (max-width: 767px) {
     .flex-box {
       display: block; } }
 
